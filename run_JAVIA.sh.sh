@@ -32,7 +32,7 @@ grep -E '^(COUNT|NEXT|READ)$' Emails.txt
 
 # Question 6: Filter the emails sent by "Boss"
 echo "Question 6:"
-grep -E 'EMAIL (Boss|BOSS)' Emails.txt
+grep -E '^EMAIL Boss' Emails.txt
 
 # Question 7: Filter the emails sent on 2025
 echo "Question 7:"
@@ -68,7 +68,7 @@ grep -E '^(COUNT|NEXT|READ)$' Emails.txt | tr '[:upper:]' '[:lower:]'
 
 # Question 14 (sed): Replace both "ImportantPerson" and "OtherPerson" with "Others" in the Emails.txt file
 echo "Question 14:"
-grep -E '^Other' Emails.txt | sed -E 's/(Important|Other)Person/Others/g'
+grep -E '^EMAIL (ImportantPerson|OtherPerson)' Emails.txt | sed -E 's/(Important|Other)Person/Others/g'
 
 # Question 15 (awk): Print all emails' themes (such as 'Can you help me on this?' in the first line of Emails.txt)
 echo "Question 15:"
